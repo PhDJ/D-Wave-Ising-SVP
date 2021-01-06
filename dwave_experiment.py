@@ -164,9 +164,9 @@ class Ising_SVP_Experiment():
         # each lattice_index corresponds to a different random lattice to experiment on
         for lattice_index in range(2):
             lattice = np.random.randint(low=0, high=5, size=(self.dim, self.dim), dtype=int)
-            self.preprocess(lattice_index, lattice)
+            self.preprocess(lattice)
             self.execute_dwave()
-            self.postprocess(lattice_index, lattice)
+            self.postprocess(lattice_index)
 
 
 def main():
